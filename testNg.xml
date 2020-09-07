@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="My First Suite" >
+<test name="My First Testcase">
+<classes>
+<class name="com.test.demo.testrunner.TestRunner"/>
+
+</classes>
+</test>
+
+</suite>
