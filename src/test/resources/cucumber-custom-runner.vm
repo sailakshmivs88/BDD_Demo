@@ -1,0 +1,19 @@
+#parse("/array.java.vm")
+#if ($packageName)
+#end
+
+import org.testng.annotations.DataProvider;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+@CucumberOptions(
+strict = $strict,
+        features = {"$featureFile"},
+        plugin= #stringArray($plugins)
+        )
+public class $className extends AbstractTestNGCucumberTests {	
+@DataProvider
+	public  Object[][] scenarios(){
+		return super.scenarios();
+	}
+}
